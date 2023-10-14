@@ -4,16 +4,15 @@ interface UseFetchParams<T> {
   api: () => Promise<T>;
 }
 
-export function useFetch<T>(params: UseFetchParams<T>) {
+function useFetch<T>(params: UseFetchParams<T>) {
   const { api } = params;
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
   const [data, setData] = useState<T>();
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        setIsLoading(true);
         const res = await api();
         if (res) {
           setData(res);
@@ -36,3 +35,5 @@ export function useFetch<T>(params: UseFetchParams<T>) {
     data,
   };
 }
+
+export default useFetch;
