@@ -4,7 +4,7 @@ export interface IconProps {
   className?: string;
 }
 
-export interface GetUsersResponse {
+export interface GetUsersData {
   id: number;
   name: string;
   username: string;

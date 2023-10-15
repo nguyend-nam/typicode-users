@@ -1,9 +1,9 @@
 import { IconProps } from "../../lib/schema";
 
 export const IconHelp = (props: IconProps) => {
-  const { height, width, className } = props;
+  const { height, width, className, ...rest } = props;
   return (
-    <span className={className}>
+    <span className={className} {...rest}>
       <svg
         width={width || "24"}
         height={height || "24"}
