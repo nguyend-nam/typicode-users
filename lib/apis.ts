@@ -1,5 +1,5 @@
 import fetcher from "./fetcher";
-import { GetUsersResponse } from "./schema";
+import { GetUsersData } from "./schema";
 
 type Headers = Record<string, string>;
 
@@ -9,7 +9,7 @@ export class Client {
   };
 
   public getUsers() {
-    return fetcher<GetUsersResponse[]>(
+    return fetcher<GetUsersData[]>(
       "https://jsonplaceholder.typicode.com/users",
       {
         method: "GET",

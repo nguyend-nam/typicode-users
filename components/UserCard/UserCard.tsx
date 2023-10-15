@@ -1,11 +1,11 @@
 import { useState } from "react";
-import { GetUsersResponse } from "../../lib/schema";
+import { GetUsersData } from "../../lib/schema";
 import { UserInfoModal } from "../UserInfoModal";
 import cx from "classnames";
 import { Avatar } from "../Avatar";
 
 export interface UserCardProps {
-  data: GetUsersResponse;
+  data: Partial<GetUsersData>;
   className?: string;
 }
 
@@ -26,9 +26,11 @@ export const UserCard = (props: UserCardProps) => {
         )}
       >
         <Avatar size="100" alt={`${data?.name} logo`} />
-        <h2 className="truncate max-w-[100%] text-sm leading-[21px]">
-          {data?.name || "-"}
-        </h2>
+        {data?.name ? (
+          <h2 className="truncate max-w-[100%] text-sm leading-[21px]">
+            {data.name}
+          </h2>
+        ) : null}
         {data?.email ? (
           <a
             href={`mailto:${data.email}`}
