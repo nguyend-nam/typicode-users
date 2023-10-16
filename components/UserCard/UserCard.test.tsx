@@ -5,8 +5,8 @@ import {
   act,
   waitFor,
 } from "@testing-library/react";
-import { UserCard } from "../components/UserCard";
-import { GetUsersData } from "../lib/schema";
+import { UserCard } from ".";
+import { GetUsersData } from "../../lib/schema";
 
 jest.useFakeTimers();
 

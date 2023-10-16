@@ -6,7 +6,7 @@ import {
   IconHelp,
   IconLoading,
   IconNotification,
-} from "../components/icons";
+} from ".";
 
 describe("Icons component", () => {
   test.each([

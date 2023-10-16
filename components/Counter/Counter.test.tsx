@@ -1,5 +1,5 @@
 import { render, act } from "@testing-library/react";
-import { Counter } from "../components/Counter";
+import { Counter } from ".";
 
 jest.useFakeTimers();
 

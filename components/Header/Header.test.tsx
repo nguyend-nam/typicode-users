@@ -1,6 +1,6 @@
 import { render, screen, fireEvent } from "@testing-library/react";
-import { Header } from "../components/Header";
-import { mockNextUseRouter } from "./hooks";
+import { Header } from ".";
+import { mockNextUseRouter } from "../../utils/mock";
 
 describe("Header component", () => {
   // mock push function to test onclick events

@@ -1,5 +1,5 @@
 import { render } from "@testing-library/react";
-import { Avatar } from "../components/Avatar";
+import { Avatar } from ".";
 
 describe("Avatar component", () => {
   it("renders with default size (32px)", () => {
